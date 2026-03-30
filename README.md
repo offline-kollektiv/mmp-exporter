@@ -15,3 +15,4 @@ example-config.json:
 ```bash
 uv run mmp-exporter --config example-config.json
 ```
+If you are using Grafana, you can use the premade [dashboard](https://github.com/offline-kollektiv/mmp-exporter/blob/main/dashboard.json)
