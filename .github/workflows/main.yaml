@@ -1,0 +1,17 @@
+on:
+  push:
+jobs:
+  ci:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v5
+      - name: "Do linting"
+        run: nix-shell --run 'ruff check'
+      - name: "Check formatting"
+        run: nix-shell --run 'ruff format --check src'
+      - name: "Sort imports"
+        run: nix-shell --run 'isort --check .'
+      - name: "Run tests"
+        run: nix-shell --run 'uv run pytest'
+      - name: "Run integration test"
+        run: cd nixos && nix-build -A vmTest

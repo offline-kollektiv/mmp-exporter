@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.direnv
+
+# nix-shell generated files
+.pre-commit-config.yaml
+
+# nix-build output
+result
+result-*
+.nixos-test-history
