@@ -8,7 +8,7 @@ example-config.json:
 {
   "port": 8000,
   "baudRate": 9600,
-  "serialPath": "/dev/USBtty01"
+  "serialPath": "/dev/ttyUSB0"
 }
 ```
 
